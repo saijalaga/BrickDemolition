@@ -145,14 +145,14 @@ export class GameManager extends Component {
 checkLevelComplete() {
     try {
         console.log("Checking Level Completion...");
-        if (this.bricksLayer.children.length === 19) {
+        if (this.bricksLayer.children.length === 0) {
             console.log("Level Complete! Showing result panel.");
 
             // Show Result panel instead of moving to next level
             const panelCtrl = this.panelController.getComponent(PanelController);
             panelCtrl?.showResult()
 
-            // Pass current score to ResultController
+            
 
 
         } else {
@@ -180,17 +180,17 @@ startGame(level: number = 1) {
         const panelCtrl =this.panelController.getComponent(PanelController);
         panelCtrl?.showResult();
     } else {
-        // ✅ Load next level bricks
+    
         this.spawnBricks(this.currentLevel);
         this.updateLevelLabel();
         this.resetBallAndPaddle();
-        this.score = 0;   // reset score if you want
+    this.score = 0;  
         this.updateScoreLabel();
     }
 }
 
     update(dt: number) {
-        // 🔹 Pause check — if paused, freeze the game
+    
         if (this.gamePaused) {
             if (this.ball) {
                 const ballRB = this.ball.getComponent(BallController);
@@ -214,9 +214,8 @@ startGame(level: number = 1) {
     }
 
 
-    // Reset everything for a level
+    
 resetLevel(level?: number) {
-    // If level is specified, set it; otherwise keep current
     if (level !== undefined) this.currentLevel = level;
 
     // Reset score
@@ -230,20 +229,6 @@ resetLevel(level?: number) {
     this.spawnBricks(this.currentLevel);
 
         this.updateLevelLabel();
-
-    // // Optionally unpause game
-    // this.unfreezeGame();
 }
-
-// // Freeze/unfreeze for pause handling
-// private isPaused: boolean = false;
-
-// freezeGame() {
-//     this.isPaused = true;
-// }
-
-// unfreezeGame() {
-//     this.isPaused = false;
-// }
 
 }

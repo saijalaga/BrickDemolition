@@ -10,7 +10,7 @@
     "strict": false,
     "experimentalDecorators": true,
     "baseUrl": "./",
-    "types": [],
+    "types": ["cc"],
     "typeRoots": [
       "./temp/declarations",
       "./node_modules/@types"
