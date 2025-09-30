@@ -1,0 +1,23 @@
+{
+  /* Base configuration. Do not edit this field. */
+  "extends": "./temp/tsconfig.cocos.json",
+
+  /* Add your custom configuration here. */
+  "compilerOptions": {
+    "strict": false,
+    "target": "es6",
+    "module": "es6",
+    "strict": false,
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "types": [],
+    "typeRoots": [
+      "./temp/declarations",
+      "./node_modules/@types"
+    ]
+  },
+    "include": [
+    "assets/**/*",
+    "temp/declarations/**/*.d.ts"
+  ]
+}

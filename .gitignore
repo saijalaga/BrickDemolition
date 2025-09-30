@@ -1,0 +1,12 @@
+# Cocos Creator 3.x
+library/
+local/
+temp/
+settings/
+*.log
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+*.tmp
