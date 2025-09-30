@@ -3,12 +3,15 @@
   "builder": {
     "common": {
       "polyfills": {
-        "asyncFunctions": true
+        "asyncFunctions": false,
+        "coreJs": true
       },
       "buildPath": "project://build",
       "outputName": "web-mobile",
       "mainBundleCompressionType": "merge_dep",
-      "platform": "web-mobile"
+      "platform": "web-mobile",
+      "debug": false,
+      "md5Cache": false
     },
     "taskOptionsMap": {
       "1759268916451": {
@@ -25,6 +28,30 @@
       },
       "1759270171176": {
         "orientation": "auto",
+        "embedWebDebugger": false,
+        "cullEngineAsmJsModule": false,
+        "__version__": "1.0.1"
+      },
+      "1759271737337": {
+        "orientation": "portrait",
+        "embedWebDebugger": false,
+        "cullEngineAsmJsModule": false,
+        "__version__": "1.0.1"
+      },
+      "1759271944909": {
+        "orientation": "portrait",
+        "embedWebDebugger": false,
+        "cullEngineAsmJsModule": false,
+        "__version__": "1.0.1"
+      },
+      "1759272074692": {
+        "orientation": "portrait",
+        "embedWebDebugger": false,
+        "cullEngineAsmJsModule": false,
+        "__version__": "1.0.1"
+      },
+      "1759272191851": {
+        "orientation": "portrait",
         "embedWebDebugger": false,
         "cullEngineAsmJsModule": false,
         "__version__": "1.0.1"
